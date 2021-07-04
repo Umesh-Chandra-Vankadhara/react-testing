@@ -3,13 +3,13 @@ import "./Counter.css";
 
 export const Counter = () => {
   const [counterValue, setCounterValue] = useState(0);
-  const [inputVa, setInputVa] = useState(1);
+  const [inputVal, setInputVal] = useState(1);
 
   const addToCounter = () => {
-    setCounterValue(counterValue + inputVa);
+    setCounterValue(counterValue + inputVal);
   };
   const subtractFromCounter = () => {
-    setCounterValue(counterValue - inputVa);
+    setCounterValue(counterValue - inputVal);
   };
   return (
     <div>
@@ -28,9 +28,9 @@ export const Counter = () => {
       <input
         type="number"
         className="text-center"
-        value={inputVa}
-        // onChange={(e) => setInputVa;(e.target.value)}  // e.target.value is string
-        onChange={(e) => setInputVa(Number(e.target.value))}
+        value={inputVal}
+        // onChange={(e) => setInputVal;(e.target.value)}  // e.target.value is string
+        onChange={(e) => setInputVal(Number(e.target.value))}
         data-testid="input"
       />
       <button data-testid="addBtn" onClick={addToCounter}>
